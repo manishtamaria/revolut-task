@@ -2,6 +2,7 @@ package com.revolut.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public class Transaction implements BaseDbModel{
@@ -9,15 +10,25 @@ public class Transaction implements BaseDbModel{
     private Long fromBankAccountId;
     private Long toBankAccountId;
     private BigDecimal amount;
+    private Date creationDate;
     private Currency currency;
-    private LocalDate creationDate;
-    private LocalDate updateDate;
+    private Date updateDate;
     private TransactionStatus status;
 
     public Transaction() {
-        this.creationDate = LocalDate.now();
-        this.updateDate = LocalDate.now();
+        this.creationDate = new Date();
+        this.updateDate = new Date();
         this.status = TransactionStatus.NEW;
+    }
+
+    public Transaction(Long fromBankAccountId, Long toBankAccountId, BigDecimal amount, Currency currency) {
+        this.fromBankAccountId = fromBankAccountId;
+        this.toBankAccountId = toBankAccountId;
+        this.amount = amount;
+        this.currency = currency;
+        this.status = TransactionStatus.NEW;
+        this.creationDate = new Date();
+        this.updateDate = new Date();
     }
 
     public Long getId() {
@@ -60,19 +71,19 @@ public class Transaction implements BaseDbModel{
         this.currency = currency;
     }
 
-    public LocalDate getCreationDate() {
+    public Date getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(LocalDate creationDate) {
+    public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
-    public LocalDate getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(LocalDate updateDate) {
+    public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
 

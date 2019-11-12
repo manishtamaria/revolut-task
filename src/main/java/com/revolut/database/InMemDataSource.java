@@ -17,7 +17,7 @@ public class InMemDataSource {
         ds = new HikariDataSource();
         //initializing the in-memry H2 database and initialize it by the schema and some initial data
         ds.setJdbcUrl("jdbc:h2:mem:test;" +
-                "INIT=RUNSCRIPT FROM 'classpath:db_schema/schema.sql'\\;RUNSCRIPT FROM 'classpath:db_schema/init_data.sql';" +
+                "INIT=RUNSCRIPT FROM 'classpath:db_schema.sql'\\;RUNSCRIPT FROM 'classpath:sql_init_data.sql';" +
                 "TRACE_LEVEL_FILE=4");
         //TODO login and password should be provided trough system variables
         ds.setUsername("sa");
