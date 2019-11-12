@@ -14,6 +14,6 @@ VALUES
 
 INSERT INTO account (owner_name, balance, currency_id)
 VALUES
-  ('Manish Kumar', 1000.5, 4),
-  ('Ashish Kumar', 1000.5, 4),
-  ('Klaudia Oplia', 1000.5, 4);
+  ('Manish Kumar', 1000, 4),
+  ('Ashish Kumar', 1000, 4),
+  ('Klaudia Oplia', 1000, 4);
