@@ -1,11 +1,11 @@
-# revolut-task
-To Start app :
+# revolut-task <br/>
+To Start app : <br/>
 
-step 1: mvn clean install
-step 2 : mvn exec:java
-step 3 : open locahost:8081/api/accounts  => it will show default accounts in database
+step 1: mvn clean install <br/>
+step 2 : mvn exec:java <br/>
+step 3 : open locahost:8081/api/accounts  => it will show default accounts in database <br/>
 
-# API Model Structures :
+# API Model Structures : <br/>
 
 Account : <br/>
 {
